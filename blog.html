@@ -1,58 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog - Health Yoga Fitness</title>
-<style>
-body{font-family:Arial,sans-serif;margin:0;background:#E6F4EA;color:#1B1B1B;}
-header{background:#1B4332;color:white;padding:30px;text-align:center;}
-nav{background:#2D6A4F;padding:10px;display:flex;justify-content:center;}
-nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold;}
-nav a:hover{color:#FFB703;}
-.container{max-width:900px;margin:auto;padding:20px;}
-h2{color:#1B4332;margin-top:20px;border-left:4px solid #1B4332;padding-left:10px;}
-.card{background:white;padding:20px;margin:20px 0;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.1);transition: transform 0.2s;}
-.card:hover{transform: scale(1.02);}
-.card img{width:100%;border-radius:12px;}
-.card h3{margin-top:10px;}
-.card p{margin-top:10px;}
-.card a{display:inline-block;margin-top:10px;color:#40916C;text-decoration:none;font-weight:bold;}
-.card a:hover{color:#2D6A4F;}
-.footer{background:#1B4332;color:white;padding:20px;text-align:center;margin-top:40px;}
-</style>
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><h1>Health • Yoga • Fitness</h1></header>
+
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="blog.html">Blog</a>
-<a href="contact.html">Contact</a>
+    <h2>Health Blog</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
 </nav>
+
 <div class="container">
-<h2>Blog Posts</h2>
-<div id="posts-container"></div>
+    <h1>Our Blog Posts</h1>
+
+    <div id="posts"></div>
 </div>
-<footer class="footer">© 2025 Health, Yoga & Fitness Blog | All Rights Reserved</footer>
+
+<footer>
+    © 2025 Health & Yoga Awareness Blog
+</footer>
 
 <script>
 fetch('posts.json')
-.then(response => response.json())
-.then(posts => {
-    const container = document.getElementById('posts-container');
-    posts.forEach(post => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-            <img src="${post.image}" alt="${post.title}">
-            <h3>${post.title}</h3>
-            <p>${post.snippet}</p>
-            <a href="${post.link}">Read More →</a>
-        `;
-        container.appendChild(card);
-    });
-});
+  .then(response => response.json())
+  .then(data => {
+      let container = document.getElementById('posts');
+      data.forEach(post => {
+          container.innerHTML += `
+              <div class="post-card">
+                  <h2>${post.title}</h2>
+                  <p>${post.snippet}</p>
+                  <a href="${post.link}">Read More →</a>
+              </div>
+          `;
+      });
+  });
 </script>
+
 </body>
 </html>
