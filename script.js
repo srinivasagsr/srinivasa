@@ -26,10 +26,14 @@ const quotes = [
 
 let tipIndex = 0;
 const tipBanner = document.getElementById("tipBanner");
+// Also update sidebar tip
+const sidebarTip = document.getElementById("sidebarTip");
 setInterval(() => {
     tipIndex = (tipIndex + 1) % quotes.length;
     tipBanner.textContent = quotes[tipIndex];
+    if(sidebarTip) sidebarTip.textContent = quotes[tipIndex];
 }, 12000);
+
 
 // LIGHTBOX FUNCTIONALITY
 const lightboxImages = document.querySelectorAll(".lightbox-img");
@@ -53,3 +57,4 @@ lightboxOverlay.addEventListener("click", (e) => {
         lightboxOverlay.style.display = "none";
     }
 });
+
