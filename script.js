@@ -29,3 +29,28 @@ setInterval(() => {
     tipIndex = (tipIndex + 1) % quotes.length;
     tipBanner.textContent = quotes[tipIndex];
 }, 12000); // rotate every 12 seconds
+
+// LIGHTBOX FUNCTIONALITY
+const lightboxImages = document.querySelectorAll(".lightbox-img");
+const lightboxOverlay = document.getElementById("lightboxOverlay");
+const lightboxContent = document.getElementById("lightboxContent");
+const lightboxClose = document.getElementById("lightboxClose");
+
+lightboxImages.forEach(img => {
+    img.addEventListener("click", () => {
+        lightboxOverlay.style.display = "flex";
+        lightboxContent.src = img.src;
+    });
+});
+
+lightboxClose.addEventListener("click", () => {
+    lightboxOverlay.style.display = "none";
+});
+
+lightboxOverlay.addEventListener("click", (e) => {
+    if (e.target === lightboxOverlay) {
+        lightboxOverlay.style.display = "none";
+    }
+});
+
+
