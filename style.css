@@ -117,14 +117,14 @@ body.dark .post-hero {
 }
 
 /* Optional subtle animation */
-.divider path {
-    animation: wave 6s ease-in-out infinite alternate;
-}
+.divider path { animation: wave 6s ease-in-out infinite alternate; }
+
 
 @keyframes wave {
     0% { transform: translateY(0); }
     100% { transform: translateY(5px); }
 }
+
 
 
 
