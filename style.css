@@ -65,3 +65,42 @@ body.dark .post-hero {
 .back-btn:hover {
     background: #6b8e4e;
 }
+
+/* LIGHTBOX STYLES */
+.lightbox-overlay {
+    position: fixed;
+    display: none;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox-close:hover {
+    color: #ccc;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+}
+
