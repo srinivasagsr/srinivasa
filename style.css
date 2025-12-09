@@ -125,6 +125,62 @@ body.dark .post-hero {
     100% { transform: translateY(5px); }
 }
 
+/* STICKY SIDEBAR */
+#sidebar {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 220px;
+    background: #f8f3ec;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-size: 0.95rem;
+    z-index: 999;
+}
+
+body.dark #sidebar {
+    background: #3a372d;
+    color: #ddd;
+}
+
+#sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #556b2f;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 8px;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+#sidebar ul li a:hover {
+    color: #8fbc8f;
+}
+
+#sidebarTip {
+    font-style: italic;
+    color: #6b4f31;
+}
+
+/* Hide sidebar on small screens */
+@media (max-width: 992px) {
+    #sidebar { display: none; }
+}
+
+
 
 
 
