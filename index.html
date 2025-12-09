@@ -1,31 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health, Yoga & Fitness Awareness</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Srinivasa's Portfolio - Projects, Blogs, Gallery & More">
+    <meta name="keywords" content="Srinivasa, Portfolio, Developer, AI, Projects">
+    <meta name="author" content="Srinivasa">
+
+    <title>Srinivasa Portfolio</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Scroll Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 </head>
+
 <body>
 
-<nav>
-    <h2>Health Blog</h2>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">Srinivasa</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="themeToggle">🌙</button>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero" data-aos="fade-up">
+    <h1>Welcome to My Portfolio</h1>
+    <p>AI Enthusiast • Developer • Learner</p>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="gallery-section" data-aos="fade-up">
+    <h2>Media & Image Gallery</h2>
+    <div class="gallery">
+        <img src="https://picsum.photos/300?random=1" alt="">
+        <img src="https://picsum.photos/300?random=2" alt="">
+        <img src="https://picsum.photos/300?random=3" alt="">
+        <img src="https://picsum.photos/300?random=4" alt="">
     </div>
-</nav>
+</section>
 
-<div class="container">
-    <h1>Welcome to Health, Yoga & Fitness</h1>
-    <p>Learn how to improve your health, stay fit, and practice yoga daily.</p>
-</div>
+<!-- Blog Section -->
+<section id="blog" class="blog-section" data-aos="fade-up">
+    <h2>My Blog</h2>
 
-<footer>
-    © 2025 Health & Yoga Awareness Blog
+    <div class="blog-item">
+        <h3>How I Started Learning AI</h3>
+        <p class="short">A quick story about my journey...</p>
+        <p class="full hidden">Full blog content goes here. You can expand this section and write detailed content.</p>
+        <button class="readmore">Read More</button>
+    </div>
+
+    <div class="blog-item">
+        <h3>My Top Projects</h3>
+        <p class="short">Some of my best work...</p>
+        <p class="full hidden">Write about your projects in detail here...</p>
+        <button class="readmore">Read More</button>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact-section" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <p>Email: <strong>srinivasa@example.com</strong></p>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2025 Srinivasa • All Rights Reserved</p>
+    <p>Made with ❤️ using GitHub Pages</p>
 </footer>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init();</script>
+
+<!-- Analytics Placeholder -->
+<!-- <script>Your Google Analytics code here</script> -->
 
 </body>
 </html>
