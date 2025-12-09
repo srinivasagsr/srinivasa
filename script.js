@@ -13,3 +13,19 @@ document.querySelectorAll(".readmore").forEach(btn => {
         btn.textContent = btn.textContent === "Read More" ? "Show Less" : "Read More";
     });
 });
+
+// ROTATING MOTIVATIONAL QUOTES
+const quotes = [
+    "“Take care of your body; it’s the only place you live.”",
+    "“Health is a state of complete harmony of the body, mind, and spirit.”",
+    "“Yoga is the journey of the self, through the self, to the self.”",
+    "“Let food be thy medicine and medicine be thy food.”",
+    "“A healthy outside starts from the inside.”"
+];
+
+let tipIndex = 0;
+const tipBanner = document.getElementById("tipBanner");
+setInterval(() => {
+    tipIndex = (tipIndex + 1) % quotes.length;
+    tipBanner.textContent = quotes[tipIndex];
+}, 12000); // rotate every 12 seconds
