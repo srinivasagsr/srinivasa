@@ -104,3 +104,27 @@ body.dark .post-hero {
     from { opacity: 0; } to { opacity: 1; }
 }
 
+.divider {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+@media (max-width: 768px) {
+    .divider {
+        height: 50px;
+    }
+}
+
+/* Optional subtle animation */
+.divider path {
+    animation: wave 6s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(5px); }
+}
+
+
+
