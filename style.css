@@ -4,52 +4,69 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-/* Dark Mode */
+/* DARK MODE */
 body.dark {
     background: #111;
     color: #fff;
 }
 
+/* NAVBAR */
 .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px;
-    position: fixed;
-    width: 100%;
-    top: 0;
+    align-items: center;
     background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
 }
 
 body.dark .navbar {
     background: rgba(20,20,20,0.9);
 }
 
-.navbar a {
-    margin: 0 10px;
+.navbar nav a {
+    margin: 0 8px;
     text-decoration: none;
     color: inherit;
+    font-weight: 400;
 }
 
+/* THEME BUTTON */
 #themeToggle {
-    border: none;
     padding: 8px 14px;
-    cursor: pointer;
-    background: #eee;
     border-radius: 6px;
+    background: #eee;
+    border: none;
+    cursor: pointer;
 }
 
 body.dark #themeToggle {
-    background: #333;
+    background: #444;
     color: white;
 }
 
+/* HERO SECTION */
 .hero {
     padding: 150px 20px 100px;
     text-align: center;
+    background: linear-gradient(135deg,#a8e063,#56ab2f,#95d5f5);
+    color: #fff;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
-.gallery-section, .blog-section, .contact-section {
+/* INFO SECTIONS */
+.info-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* GALLERY */
+.gallery-section {
     padding: 60px 20px;
     text-align: center;
 }
@@ -63,15 +80,22 @@ body.dark #themeToggle {
 
 .gallery img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* BLOG */
+.blog-section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .blog-item {
-    margin: 20px auto;
     max-width: 700px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
-    background: #f4f4f4;
+    border-radius: 12px;
+    background: #f3f3f3;
 }
 
 body.dark .blog-item {
@@ -84,13 +108,16 @@ body.dark .blog-item {
 
 .readmore {
     margin-top: 10px;
-    padding: 6px 12px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
+/* FOOTER */
 .footer {
-    text-align: center;
-    padding: 20px;
     background: #222;
     color: white;
+    text-align: center;
+    padding: 20px;
     margin-top: 50px;
 }
