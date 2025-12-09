@@ -9,7 +9,8 @@ toggle.addEventListener("click", () => {
 document.querySelectorAll(".readmore").forEach(btn => {
     btn.addEventListener("click", () => {
         const parent = btn.parentElement;
-        parent.querySelector(".full").classList.toggle("hidden");
+        const full = parent.querySelector(".full");
+        if(full) full.classList.toggle("hidden");
         btn.textContent = btn.textContent === "Read More" ? "Show Less" : "Read More";
     });
 });
@@ -28,7 +29,7 @@ const tipBanner = document.getElementById("tipBanner");
 setInterval(() => {
     tipIndex = (tipIndex + 1) % quotes.length;
     tipBanner.textContent = quotes[tipIndex];
-}, 12000); // rotate every 12 seconds
+}, 12000);
 
 // LIGHTBOX FUNCTIONALITY
 const lightboxImages = document.querySelectorAll(".lightbox-img");
@@ -52,5 +53,3 @@ lightboxOverlay.addEventListener("click", (e) => {
         lightboxOverlay.style.display = "none";
     }
 });
-
-
