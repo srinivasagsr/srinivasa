@@ -5,7 +5,7 @@ toggle.addEventListener("click", () => {
     toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
-// BLOG READ MORE
+// BLOG READ MORE TOGGLE
 document.querySelectorAll(".readmore").forEach(btn => {
     btn.addEventListener("click", () => {
         const parent = btn.parentElement;
