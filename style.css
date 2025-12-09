@@ -1,82 +1,96 @@
-/* Global styling */
 body {
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
-    color: #222;
+    font-family: "Poppins", sans-serif;
+    transition: background 0.3s, color 0.3s;
 }
 
-/* Navigation bar */
-nav {
-    background: #ffffff;
-    padding: 15px 25px;
+/* Dark Mode */
+body.dark {
+    background: #111;
+    color: #fff;
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #e0e0e0;
-    position: sticky;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
     top: 0;
-    z-index: 100;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
 }
 
-nav a {
-    margin-left: 20px;
+body.dark .navbar {
+    background: rgba(20,20,20,0.9);
+}
+
+.navbar a {
+    margin: 0 10px;
     text-decoration: none;
-    color: #0077cc;
-    font-weight: bold;
+    color: inherit;
 }
 
-nav a:hover {
-    color: #005599;
+#themeToggle {
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    background: #eee;
+    border-radius: 6px;
 }
 
-/* Main content area */
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 30px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+body.dark #themeToggle {
+    background: #333;
+    color: white;
 }
 
-/* Footer */
-footer {
+.hero {
+    padding: 150px 20px 100px;
     text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-    background: #ffffff;
-    color: #555;
-    border-top: 2px solid #e0e0e0;
 }
 
-/* Blog card styling */
-.post-card {
-    padding: 15px;
-    margin-bottom: 20px;
-    border-left: 4px solid #0077cc;
-    background: #f9f9f9;
+.gallery-section, .blog-section, .contact-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
     border-radius: 10px;
 }
 
-.post-card a {
-    color: #0077cc;
-    font-weight: bold;
+.blog-item {
+    margin: 20px auto;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f4f4f4;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-    nav a {
-        margin: 10px;
-    }
+body.dark .blog-item {
+    background: #222;
+}
 
-    .container {
-        width: 95%;
-    }
+.hidden {
+    display: none;
+}
+
+.readmore {
+    margin-top: 10px;
+    padding: 6px 12px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 50px;
 }
